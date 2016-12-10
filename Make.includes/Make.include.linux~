@@ -1,0 +1,53 @@
+# Top level PLAPACK directory.  
+PLAPACK_ROOT = /usr/local/plapack/PLAPACK20
+
+# Choose Manufacture  type from following list.
+CRAY  = 10
+IBM   = 20
+INTEL = 30
+SUN   = 40
+PC    = 50
+SGI   = 60
+HP    = 70
+
+MANUFACTURE   = $(PC)
+
+# Choose Machine type from following list.
+CRAYPVP   = 100
+CRAYMPP   = 101
+PARAGON   = 200
+SP2       = 300
+SUNOS     = 400
+LINUX     = 500
+NT        = 600
+
+MACHINE_TYPE  = $(LINUX)
+
+# indicate where to find optimized BLAS.  Contact us if you don't know how
+# to get optimized BLAS library
+
+BLAS = /usr/local/blas/blasppro.a
+
+LIB = -L/public/lib -llapack -static $(BLAS)  -lm -lc 
+
+CFLAGS = -O3  -I$(PLAPACK_ROOT)/INCLUDE \
+         -DMACHINE_TYPE=$(MACHINE_TYPE) -DMANUFACTURE=$(MANUFACTURE)  \
+	 -DDEBUG=0 
+
+FFLAGS = -O3 -Q -I$(PLAPACK_ROOT)/INCLUDE
+
+CC     = mpicc
+FC     = mpif77
+AR     = ar
+SED    = sed
+RANLIB = ranlib
+LINKER = mpif77 
+LFLAGS = $(CFLAGS)
+
+SEQ_LAPACK = unused 
+
+
+R20LIB     =  $(PLAPACK_ROOT)/libR20.a 
+
+POST_MAKE = chmod ugo+rw *.a
+

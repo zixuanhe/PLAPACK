@@ -1,0 +1,247 @@
+# enter distr. block size:
+2
+# enter algorithmic  block size:
+4
+# turn on error checking? (0 = NO, 1 = YES):
+1
+# turn on parameter checking? (0 = NO, 1 = YES):
+1
+# turn on sequential checking? (0 = NO, 1 = YES):
+1
+##################################################################
+#
+# TEST panel-panel variant of matrix-matrix multiplication
+#
+##################################################################
+#
+# TEST DOUBLE PRECISION REAL
+#
+##################################################################
+# enter datatype:
+1
+# variant? (0 = PAN_PAN, 1 = MAT_PAN, 2 = PAN_MAT):
+0
+# enter m, n, k:
+20 30 10
+# enter transa, transb (0=notrans, 1=trans, 2=conj trans):
+0 0
+# enter datatype:
+1
+# variant? (0 = PAN_PAN, 1 = MAT_PAN, 2 = PAN_MAT):
+0
+# enter m, n, k:
+20 30 10
+# enter transa, transb (0=notrans, 1=trans, 2=conj trans):
+0 1
+# enter datatype:
+1
+# variant? (0 = PAN_PAN, 1 = MAT_PAN, 2 = PAN_MAT):
+0
+# enter m, n, k:
+20 30 10
+# enter transa, transb (0=notrans, 1=trans, 2=conj trans):
+1 0
+# enter datatype:
+1
+# variant? (0 = PAN_PAN, 1 = MAT_PAN, 2 = PAN_MAT):
+0
+# enter m, n, k:
+20 30 10
+# enter transa, transb (0=notrans, 1=trans, 2=conj trans):
+1 1
+##################################################################
+#
+# TEST DOUBLE PRECISION COMPLEX
+#
+##################################################################
+# enter datatype:
+3
+# variant? (0 = PAN_PAN, 1 = MAT_PAN, 2 = PAN_MAT):
+0
+# enter m, n, k:
+20 30 10
+# enter transa, transb (0=notrans, 1=trans, 2=conj trans):
+0 0
+# enter datatype:
+3
+# variant? (0 = PAN_PAN, 1 = MAT_PAN, 2 = PAN_MAT):
+0
+# enter m, n, k:
+20 30 10
+# enter transa, transb (0=notrans, 1=trans, 2=conj trans):
+0 1
+# enter datatype:
+3
+# variant? (0 = PAN_PAN, 1 = MAT_PAN, 2 = PAN_MAT):
+0
+# enter m, n, k:
+20 30 10
+# enter transa, transb (0=notrans, 1=trans, 2=conj trans):
+1 0
+# enter datatype:
+3
+# variant? (0 = PAN_PAN, 1 = MAT_PAN, 2 = PAN_MAT):
+0
+# enter m, n, k:
+20 30 10
+# enter transa, transb (0=notrans, 1=trans, 2=conj trans):
+1 1
+##################################################################
+#
+# TEST matrix-panel variant of matrix-matrix multiplication
+#
+##################################################################
+#
+# TEST DOUBLE PRECISION REAL
+#
+##################################################################
+# enter datatype:
+1
+# variant? (0 = PAN_PAN, 1 = MAT_PAN, 2 = PAN_MAT):
+1
+# enter m, n, k:
+20 30 10
+# enter transa, transb (0=notrans, 1=trans, 2=conj trans):
+0 0
+# enter datatype:
+1
+# variant? (0 = PAN_PAN, 1 = MAT_PAN, 2 = PAN_MAT):
+1
+# enter m, n, k:
+20 30 10
+# enter transa, transb (0=notrans, 1=trans, 2=conj trans):
+0 1
+# enter datatype:
+1
+# variant? (0 = PAN_PAN, 1 = MAT_PAN, 2 = PAN_MAT):
+1
+# enter m, n, k:
+20 30 10
+# enter transa, transb (0=notrans, 1=trans, 2=conj trans):
+1 0
+# enter datatype:
+1
+# variant? (0 = PAN_PAN, 1 = MAT_PAN, 2 = PAN_MAT):
+1
+# enter m, n, k:
+20 30 10
+# enter transa, transb (0=notrans, 1=trans, 2=conj trans):
+1 1
+##################################################################
+#
+# TEST DOUBLE PRECISION COMPLEX
+#
+##################################################################
+# enter datatype:
+3
+# variant? (0 = PAN_PAN, 1 = MAT_PAN, 2 = PAN_MAT):
+1
+# enter m, n, k:
+20 30 10
+# enter transa, transb (0=notrans, 1=trans, 2=conj trans):
+0 0
+# enter datatype:
+3
+# variant? (0 = PAN_PAN, 1 = MAT_PAN, 2 = PAN_MAT):
+1
+# enter m, n, k:
+20 30 10
+# enter transa, transb (0=notrans, 1=trans, 2=conj trans):
+0 1
+# enter datatype:
+3
+# variant? (0 = PAN_PAN, 1 = MAT_PAN, 2 = PAN_MAT):
+1
+# enter m, n, k:
+20 30 10
+# enter transa, transb (0=notrans, 1=trans, 2=conj trans):
+1 0
+# enter datatype:
+3
+# variant? (0 = PAN_PAN, 1 = MAT_PAN, 2 = PAN_MAT):
+1
+# enter m, n, k:
+20 30 10
+# enter transa, transb (0=notrans, 1=trans, 2=conj trans):
+1 1
+##################################################################
+#
+# TEST panel-matrix variant of matrix-matrix multiplication
+#
+##################################################################
+#
+# TEST DOUBLE PRECISION REAL
+#
+##################################################################
+# enter datatype:
+1
+# variant? (0 = PAN_PAN, 1 = MAT_PAN, 2 = PAN_MAT):
+2
+# enter m, n, k:
+20 30 10
+# enter transa, transb (0=notrans, 1=trans, 2=conj trans):
+0 0
+# enter datatype:
+1
+# variant? (0 = PAN_PAN, 1 = MAT_PAN, 2 = PAN_MAT):
+2
+# enter m, n, k:
+20 30 10
+# enter transa, transb (0=notrans, 1=trans, 2=conj trans):
+0 1
+# enter datatype:
+1
+# variant? (0 = PAN_PAN, 1 = MAT_PAN, 2 = PAN_MAT):
+2
+# enter m, n, k:
+20 30 10
+# enter transa, transb (0=notrans, 1=trans, 2=conj trans):
+1 0
+# enter datatype:
+1
+# variant? (0 = PAN_PAN, 1 = MAT_PAN, 2 = PAN_MAT):
+2
+# enter m, n, k:
+20 30 10
+# enter transa, transb (0=notrans, 1=trans, 2=conj trans):
+1 1
+##################################################################
+#
+# TEST DOUBLE PRECISION COMPLEX
+#
+##################################################################
+# enter datatype:
+3
+# variant? (0 = PAN_PAN, 1 = MAT_PAN, 2 = PAN_MAT):
+2
+# enter m, n, k:
+20 30 10
+# enter transa, transb (0=notrans, 1=trans, 2=conj trans):
+0 0
+# enter datatype:
+3
+# variant? (0 = PAN_PAN, 1 = MAT_PAN, 2 = PAN_MAT):
+2
+# enter m, n, k:
+20 30 10
+# enter transa, transb (0=notrans, 1=trans, 2=conj trans):
+1 0
+# enter datatype:
+3
+# variant? (0 = PAN_PAN, 1 = MAT_PAN, 2 = PAN_MAT):
+2
+# enter m, n, k:
+20 30 10
+# enter transa, transb (0=notrans, 1=trans, 2=conj trans):
+1 1
+# enter datatype:
+3
+# variant? (0 = PAN_PAN, 1 = MAT_PAN, 2 = PAN_MAT):
+2
+# enter m, n, k:
+20 30 10
+# enter transa, transb (0=notrans, 1=trans, 2=conj trans):
+0 1
+# quit
+-1
+

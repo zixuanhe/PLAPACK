@@ -1,0 +1,25 @@
+/*
+   PLAPACK Release 3.0
+   
+   Copyright (C) 2000
+   Robert A. van de Geijn and The University of Texas at Austin
+
+   For GNU-license details see the file GNU_license in the 
+   PLAPACK root directory.
+*/
+
+Installing PLAPACK:
+
+1) Modify the Make.include file as indicated in the comments
+   in that file.  For various machines you may look at the
+   Make.includes directory.
+
+2) execute "make" in PLAPACK root directory
+
+3) cd to EXAMPLES/LU
+
+4) "make"
+
+5) Test the LU factorization:
+   mpirun -np 4 /tmp/LU_driver.x        (different commands may be 
+                                         necessary depending on platform)

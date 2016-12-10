@@ -1,0 +1,31 @@
+rm -f error_log output_test_gemm output_test_chol
+touch error_log output_test_gemm output_test_chol
+
+grep -v "#" input_test_gemm | mpirun -np 1 /tmp/test_gemm.x >> output_test_gemm
+echo "test_gemm: np = 1" >> error_log
+grep "PLAPACK" output_test_gemm >> error_log
+
+grep -v "#" input_test_gemm | mpirun -np 2 /tmp/test_gemm.x >> output_test_gemm
+echo "test_gemm: np = 2" >> error_log
+grep "PLAPACK" output_test_gemm >> error_log
+
+grep -v "#" input_test_gemm | mpirun -np 4 /tmp/test_gemm.x >> output_test_gemm
+echo "test_gemm: np = 4" >> error_log
+grep "PLAPACK" output_test_gemm >> error_log
+
+grep -v "#" input_test_chol | mpirun -np 1 /tmp/test_chol.x >> output_test_chol
+echo "test_chol: np = 1" >> error_log
+grep "PLAPACK" output_test_chol >> error_log
+
+grep -v "#" input_test_chol | mpirun -np 1 /tmp/test_chol.x >> output_test_chol
+echo "test_chol: np = 1" >> error_log
+grep "PLAPACK" output_test_chol >> error_log
+
+grep -v "#" input_test_chol | mpirun -np 2 /tmp/test_chol.x >> output_test_chol
+echo "test_chol: np = 2" >> error_log
+grep "PLAPACK" output_test_chol >> error_log
+
+grep -v "#" input_test_chol | mpirun -np 4 /tmp/test_chol.x >> output_test_chol
+echo "test_chol: np = 4" >> error_log
+grep "PLAPACK" output_test_chol >> error_log
+

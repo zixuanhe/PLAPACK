@@ -1,0 +1,50 @@
+# Top level PLAPACK directory.  
+PLAPACK_ROOT =      $(HOME)/PLAPACK20
+
+# Choose Manufacture  type from following list.
+CRAY  = 10
+IBM   = 20
+INTEL = 30
+SUN   = 40
+PC    = 50
+SGI   = 60
+HP    = 70
+
+MANUFACTURE   = $(CRAY)
+
+# Choose Machine type from following list.
+CRAYPVP   = 100
+CRAYMPP   = 101
+PARAGON   = 200
+SP2       = 300
+SUNOS     = 400
+LINUX     = 500
+NT        = 600
+
+MACHINE_TYPE  = $(CRAYMPP)
+
+LIB = -lsci -lf
+
+CFLAGS = -O3  -I$(PLAPACK_ROOT)/INCLUDE \
+         -DMACHINE_TYPE=$(MACHINE_TYPE) -DMANUFACTURE=$(MANUFACTURE)  \
+	 -DDEBUG=0 
+
+FFLAGS = -O3 
+
+CC     = cc
+FC     = f90
+AR     = ar
+SED    = sed
+RANLIB = echo
+LINKER = $(CC)
+LFLAGS = $(CFLAGS)
+
+SEQ_LAPACK = unused 
+
+PLAPACKLIB     =  $(PLAPACK_ROOT)/libPLAPACK.a
+
+POST_MAKE = chmod ugo+rw *.a
+
+
+
+
