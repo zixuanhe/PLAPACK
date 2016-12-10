@@ -1,5 +1,5 @@
 # Top level PLAPACK directory.  
-PLAPACK_ROOT = /usr/local/plapack/PLAPACKR30
+PLAPACK_ROOT = /usr/local/plapack
 
 # Choose Manufacture  type from following list.
 CRAY  = 10
