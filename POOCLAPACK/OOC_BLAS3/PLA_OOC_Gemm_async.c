@@ -89,10 +89,12 @@ int PLA_OOC_Gemm_async( int nb_ooc, int transa, int transb,
       }
 */
       PLA_Matrix_create_conf_to( A_ooc_1, &A_in_1 );     
-      PLA_OOC_Copy_async( A_ooc_1, A_in_1 );
+//      PLA_OOC_Copy_async( A_ooc_1, A_in_1 );
+      PLA_OOC_Copy( A_ooc_1, A_in_1 );
       
       PLA_Matrix_create_conf_to( B_ooc_1, &B_in_1 );
-      PLA_OOC_Copy_async( B_ooc_1, B_in_1 );
+      PLA_OOC_Copy( B_ooc_1, B_in_1 );
+//      PLA_OOC_Copy_async( B_ooc_1, B_in_1 );
     }
     else {
       if ( last_time )
@@ -102,8 +104,8 @@ int PLA_OOC_Gemm_async( int nb_ooc, int transa, int transb,
     }
 
     if ( !first_time ){
-      PLA_OOC_Copy_wait(A_ooc_2);
-      PLA_OOC_Copy_wait(B_ooc_2);
+//      PLA_OOC_Copy_wait(A_ooc_2);
+//      PLA_OOC_Copy_wait(B_ooc_2);
       PLA_Gemm(transa, transb, alpha, A_in_2, B_in_2, beta, C);
     }
     else

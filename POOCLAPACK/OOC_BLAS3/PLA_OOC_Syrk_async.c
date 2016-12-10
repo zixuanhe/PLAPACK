@@ -83,7 +83,8 @@ int PLA_OOC_Syrk_async( int nb_ooc, int uplo, int transa,
 	PLA_OOC_Copy_wait( A_ooc_2);
 */
       PLA_Matrix_create_conf_to( A_ooc_2, &A_in_2 );
-      PLA_OOC_Copy_async( A_ooc_2, A_in_2 );
+      PLA_OOC_Copy( A_ooc_2, A_in_2 );
+      //PLA_OOC_Copy_async( A_ooc_2, A_in_2 );
 
     }
     else {
@@ -94,7 +95,7 @@ int PLA_OOC_Syrk_async( int nb_ooc, int uplo, int transa,
     }
     
     if ( !first_time ){
-      PLA_OOC_Copy_wait( A_ooc_1);
+//      PLA_OOC_Copy_wait( A_ooc_1);
 
       PLA_Syrk( uplo, transa, alpha, A_in_1, one, C );
 

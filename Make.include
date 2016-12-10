@@ -38,6 +38,7 @@ MACHINE_TYPE  = $(LINUX)
 # LINUX on Intel platforms.)
 
 BLASLIB = /usr/local/blas/lsblaspii1.2f_03.00.a 
+BLASLIB = -lblas
 
 CFLAGS = -O3  -I$(PLAPACK_ROOT)/INCLUDE \
          -DMACHINE_TYPE=$(MACHINE_TYPE) -DMANUFACTURE=$(MANUFACTURE)  \
@@ -51,6 +52,7 @@ AR     = ar
 SED    = sed
 RANLIB = ranlib
 LINKER = mpif77 
+#LINKER = mpicc
 LFLAGS = $(CFLAGS)
 
 # If you intend to use the eigensolver or SVD library, 
@@ -65,8 +67,11 @@ SEQ_LAPACK = /usr/local/LAPACK/tmglib_LINUX.a \
 
 PLAPACKLIB =  $(PLAPACK_ROOT)/libPLAPACK.a 
 lapackLIB  = $(SEQ_LAPACK)
+lapackLIB = $(PLAPACKLIB)
 
-LIB = $(lapackLIB) $(BLASLIB) -L/public/lib -static -lm -lc 
+LIB = $(PLAPACKLIB) -lblas -L/usr/lib -lcr  -lm  -lc
+#-lc 
+#LIB = $(lapackLIB) $(BLASLIB) -L/public/lib -static -lm -lc 
  
 POST_MAKE = chmod ugo+rw *.a
 

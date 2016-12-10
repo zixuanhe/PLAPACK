@@ -5,7 +5,7 @@ OBJS = create_problem.o driver.o process_answer.o \
 
 LINPACK : $(OBJS) $(PLAPACKLIB) 
 	rm -f LU_driver*
-	$(LINKER) -o /tmp/linpack.x $(LFLAGS) $(OBJS) $(PLAPACKLIB) $(LIB)
+	$(LINKER) -o linpack.x $(LFLAGS) $(OBJS) $(PLAPACKLIB) $(LIB)
 	touch LU_driver
 
 clean :

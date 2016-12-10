@@ -4,7 +4,7 @@ OBJS = create_problem.o driver.o process_answer.o
 
 #OBJS = create_problem.o driver_OMP.o process_answer.o
 
-BIN = /tmp
+BIN = .
 
 LU_driver : $(OBJS) $(PLAPACKLIB) 
 	rm -f LU_driver*

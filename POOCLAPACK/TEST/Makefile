@@ -2,6 +2,7 @@ PLAPACK_ROOT = ../..
 include $(PLAPACK_ROOT)/Make.include
 
 TMP = /tmp
+TMP = ./
 
 UTIL   = create_problem.o \
 	create_problem_ooc.o \
@@ -22,8 +23,8 @@ TEST_OOC_CHOL_TILES = test_ooc_chol_by_panels.o
 
 TEST_OOC_CHOL_ASYNC_TILES = test_ooc_chol_async_by_panels.o 
 
+	#make test_chol
 wcr:
-	make test_chol
 	make test_ooc_chol
 	make test_ooc_chol_async
 	make test_ooc_chol_by_panels
